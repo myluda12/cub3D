@@ -79,7 +79,7 @@ void		ft_render_walls(int g_j, int i, int start)
 			check_opacity(g_textu3[(int)g_yoffset * 50 + (int)g_xofsset]);
 }
 
-void		render_column1(int i, int g_count)
+void		render_column1(int i)
 {
 	int		start;
 	int		g_j;
@@ -108,7 +108,7 @@ void		ft_render_sprite(int g_j, int i, int start)
 	g_pourcent = (g_j - start) / g_wallstripheight;
 	g_yoffset = 50 * g_pourcent;
 	if (check_opacity(g_textu0[(int)g_yoffset * 50 +
-		(int)g_sprites[g_count].xoff]) != 0x000000)
+		(int)g_sprites[g_count].xoff]) > 0x000000)
 		g_data[g_width * g_j + i] = check_opacity(g_textu0[(int)g_yoffset *
 			50 + (int)g_sprites[g_count].xoff]);
 }

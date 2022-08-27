@@ -39,7 +39,7 @@ void		ft_map_traitement1(int lenght, int fd)
 	g_y_len++;
 }
 
-void		ft_tab_1(int fd, int lenght, char **str)
+void		ft_tab_1(int lenght, char **str)
 {
 	if (ft_strlen(str[lenght]) == 0)
 		g_empty_line++;
@@ -63,7 +63,7 @@ void		fd_tab(int fd)
 	g_empty_line = 0;
 	while (get_next_line(fd, &str[lenght]))
 	{
-		ft_tab_1(fd, lenght, str);
+		ft_tab_1(lenght, str);
 		lenght++;
 		g_y_len++;
 	}
@@ -77,7 +77,7 @@ void		fd_tab(int fd)
 
 int			check_valid(char *g_check)
 {
-	if (strcmp(strrchr(g_check, '.'), ".xpm") == 0)
+	if (ft_strcmp(strrchr(g_check, '.'), ".xpm") == 0)
 		return (1);
 	return (0);
 }

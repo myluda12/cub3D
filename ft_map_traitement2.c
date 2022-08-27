@@ -17,7 +17,7 @@ int			ft_first_line(void)
 	int		i;
 
 	i = 0;
-	while (strchr("1 ", g_map[g_y_len][i]))
+	while (ft_strchr("1 ", g_map[g_y_len][i]))
 	{
 		i++;
 		if (g_map[g_y_len][i] == '\0')
@@ -31,7 +31,7 @@ int			ft_valid_map(void)
 	int		i;
 
 	i = 0;
-	while (strchr("012NWES ", g_map[g_y_len][i]))
+	while (ft_strchr("012NWES ", g_map[g_y_len][i]))
 	{
 		i++;
 		if (g_map[g_y_len][i] == '\0')

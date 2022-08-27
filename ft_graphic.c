@@ -25,7 +25,7 @@ void		ft_check_arg(char **argv, int argc)
 	else
 		g_chorfi = argv[2];
 	i = ft_strlen(argv[1]);
-	if (strcmp(g_mapo, ".cub") != 0 || i == 4)
+	if (ft_strcmp(g_mapo, ".cub") != 0 || i == 4)
 	{
 		ft_putstr("error in .cub");
 		exit(0);
@@ -73,22 +73,18 @@ void		ft_map_traitement(char **argv)
 		ft_putstr("error g_mapo");
 		exit(0);
 	}
-	if (!fd_tab(fd))
-	{
-		ft_putstr("Error in g_map fd");
-		exit(0);
-	}
+	fd_tab(fd);
 	ft_check_zero();
 }
 
 void		ft_graphic_variable(int argc)
 {
-	if (strcmp(g_chorfi, "--save") != 0 && argc == 3)
+	if (ft_strcmp(g_chorfi, "--save") != 0 && argc == 3)
 	{
 		ft_putstr("error in parameter");
 		exit(0);
 	}
-	if (strcmp(g_chorfi, "--save") != 0)
+	if (ft_strcmp(g_chorfi, "--save") != 0)
 		g_win_ptr = mlx_new_window(g_mlx_ptr, g_width, g_height, "mlx 42");
 	g_image = mlx_new_image(g_mlx_ptr, g_width, g_height);
 	g_data = (int *)mlx_get_data_addr(g_image, &g_b, &g_a, &g_c);

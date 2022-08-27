@@ -21,6 +21,19 @@ static int		condition(long result, int sign)
 	return (0);
 }
 
+void			ft_is_digit(const char *str, int i)
+{
+	while(str[i])
+	{
+		if (!(str[i] >= '0' && str[i] <= '9'))
+		{
+			ft_putstr("error in resolution !!!!");
+			exit(0);
+		}
+		i++;
+	}
+}
+
 int				ft_atoi_h(const char *str)
 {
 	int			i;
@@ -30,6 +43,7 @@ int				ft_atoi_h(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
+	ft_is_digit(str,i);
 	while (str[i] != '\0' && ((str[i] >= 8 && str[i] <= 13) || (str[i] == ' ')))
 		i++;
 	if (str[i] == '+' || str[i] == '-')

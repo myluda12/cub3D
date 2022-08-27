@@ -25,7 +25,7 @@ void		ft_design_morba3_2(int g_j, int i, int y_copy)
 	g_x = g_x + g_wall;
 }
 
-int			design_morba3(int i, unsigned int color, int g_j)
+int			design_morba3(int i, int g_j)
 {
 	int save;
 	int y_copy;
@@ -53,7 +53,7 @@ int			design_morba3(int i, unsigned int color, int g_j)
 void		ft_morba3_2(int color, int i, int g_j)
 {
 	color = 0xFFFFFF;
-	design_morba3(i, color, g_j);
+	design_morba3(i, g_j);
 	if (g_line[g_j][i] == 'N' || g_line[g_j][i] == 'E'
 	|| g_line[g_j][i] == 'W' || g_line[g_j][i] == 'S')
 	{
@@ -67,7 +67,7 @@ void		ft_morba3_3(int color, int i, int g_j)
 	if (g_line[g_j][i] == '1' || g_line[g_j][i] == ' ')
 	{
 		color = 0x6f665d;
-		design_morba3(i, color, g_j);
+		design_morba3(i, g_j);
 	}
 	else if (g_line[g_j][i] == '0'
 		|| g_line[g_j][i] == 'N' || g_line[g_j][i] == 'E'
@@ -76,7 +76,7 @@ void		ft_morba3_3(int color, int i, int g_j)
 	else if (g_line[g_j][i] == '2')
 	{
 		color = 0xdcd3f6;
-		design_morba3(i, color, g_j);
+		design_morba3(i, g_j);
 		g_sprite_number++;
 	}
 }
@@ -86,6 +86,7 @@ void		ft_morba3(void)
 	int				i;
 	unsigned int	color;
 
+	color = 0;
 	i = 0;
 	g_j = 0;
 	while (g_j < g_inde && g_line[g_j][i])

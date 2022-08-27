@@ -39,30 +39,6 @@ void		ft_switch_space(void)
 	free(str);
 }
 
-void		bubblesort(int g_inde)
-{
-	int		i;
-	int		g_j;
-	int		temp;
-
-	g_j = 0;
-	i = 0;
-	while (i < (g_inde - 1))
-	{
-		while (g_j < g_inde - 1 - i)
-		{
-			if (g_mapcount[g_j].lenghtx < g_mapcount[g_j + 1].lenghtx)
-			{
-				temp = g_mapcount[g_j + 1].lenghtx;
-				g_mapcount[g_j + 1].lenghtx = g_mapcount[g_j].lenghtx;
-				g_mapcount[g_j].lenghtx = temp;
-			}
-			g_j++;
-		}
-		i++;
-	}
-}
-
 void		fd_tab2(void)
 {
 	int			c;
@@ -92,7 +68,7 @@ void		ft_check_virg(void)
 
 void		ft_check_errormap(int p)
 {
-	if (strchr("1 0", g_map[g_y_len][0]) && g_mapcount[g_t].mapx > 0)
+	if (ft_strchr("1 0", g_map[g_y_len][0]) && g_mapcount[g_t].mapx > 0)
 	{
 		ft_return();
 		ft_switch_space();

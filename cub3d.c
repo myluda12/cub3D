@@ -35,30 +35,6 @@ void		ft_nizar_calcul(void)
 	}
 }
 
-void		bubblesort1(int g_sprite_count)
-{
-	int		i;
-	int		g_j;
-	int		temp;
-
-	g_j = 0;
-	i = 0;
-	while (i < (g_sprite_count - 1))
-	{
-		while (g_j < g_sprite_count - 1 - i)
-		{
-			if (g_sprites[g_j].g_distance > g_sprites[g_j + 1].g_distance)
-			{
-				temp = g_sprites[g_j + 1].g_distance;
-				g_sprites[g_j + 1].g_distance = g_sprites[g_j].g_distance;
-				g_sprites[g_j].g_distance = temp;
-			}
-			g_j++;
-		}
-		i++;
-	}
-}
-
 int			main(int argc, char **argv)
 {
 	int		i;

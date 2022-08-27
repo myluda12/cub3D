@@ -17,7 +17,7 @@ FLAGS = -Werror -Wextra -Wall
 ASAN = -g -fsanitize=address
 
 $(NAME) :
-	gcc -g $(SRCS) -L $(MLX_PATH) -l$(MLX_LIB)   \
+	gcc -g -Werror -Wextra -Wall $(SRCS) -L $(MLX_PATH) -l$(MLX_LIB)   \
 	-lmlx -framework OpenGL -framework AppKit -o $(NAME)
 	
 all: $(NAME)
@@ -32,3 +32,4 @@ fclean:
 re: fclean all
  .PHONY : all clean fclean re
 bounus:
+

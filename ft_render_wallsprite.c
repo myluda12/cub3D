@@ -56,7 +56,7 @@ void		render_sprite(int i)
 			if (g_swiitch == 1)
 			{
 				if (g_sprites[g_count].g_distance < g_distance)
-					render_column1(i, g_count);
+					render_column1(i);
 			}
 			g_count--;
 		}

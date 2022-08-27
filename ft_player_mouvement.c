@@ -23,8 +23,8 @@ void		ft_mouvement_up(void)
 	p = wall_collision();
 	if (p != 1)
 	{
-		g_x_player += cos(g_rotationangle) * 10;
-		g_y_player += sin(g_rotationangle) * 10;
+		g_x_player += cos(g_rotationangle) * 11;
+		g_y_player += sin(g_rotationangle) * 11;
 	}
 }
 
@@ -78,7 +78,7 @@ void		ft_mouvement_right(void)
 
 void		ft_all_mouvement(void)
 {
-	if (strcmp(g_chorfi, "--save") == 0)
+	if (ft_strcmp(g_chorfi, "--save") == 0)
 		screenshot();
 	if (g_down == 1)
 		ft_mouvement_down();

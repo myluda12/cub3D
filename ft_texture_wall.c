@@ -78,7 +78,7 @@ unsigned int		check_opacity(unsigned int hexcolor)
 	double			blue;
 	double			oppasity;
 
-	oppasity = (g_distance / 1600) > 1 ? 1 : 1 - (g_distance / 1600);
+	oppasity = (0 / 1600) > 1 ? 1 : 1 - (0 / 1600);
 	red = ((hexcolor >> 16) & 255) * oppasity;
 	green = ((hexcolor >> 8) & 255) * oppasity;
 	blue = (hexcolor & 255) * oppasity;

@@ -44,7 +44,7 @@ void		ft_intial_variable(void)
 
 int			loop_key(void)
 {
-	if (strcmp(g_chorfi, "--save") != 0)
+	if (ft_strcmp(g_chorfi, "--save") != 0)
 	{
 		mlx_hook(g_win_ptr, 2, 0, mlx_key_press, 0);
 		mlx_hook(g_win_ptr, 3, 0, key_release, 0);
@@ -61,7 +61,7 @@ int			ft_last_line(void)
 	int		i;
 
 	i = 0;
-	while (strchr("1 ", g_line[g_inde][i]))
+	while (ft_strchr("1 ", g_line[g_inde][i]))
 	{
 		i++;
 		if (g_line[g_inde][i] == ' ' && g_line[g_inde - 1][i] == '0')

@@ -31,9 +31,9 @@ int			mlx_key_press(int key)
 		g_left = 1;
 	if (key == 124)
 		g_right = 1;
-	if (key == 125)
+	if (key == 1)
 		g_down = 1;
-	if (key == 126)
+	if (key == 13)
 		g_up = 1;
 	if (key == 0)
 		g_a = 1;
@@ -50,9 +50,9 @@ int			key_release(int key)
 		g_left = 0;
 	if (key == 124)
 		g_right = 0;
-	if (key == 125)
+	if (key == 1)
 		g_down = 0;
-	if (key == 126)
+	if (key == 13)
 		g_up = 0;
 	if (key == 0)
 		g_a = 0;

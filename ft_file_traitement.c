@@ -18,23 +18,23 @@ void		ft_check(void)
 
 	if (*g_check != NULL)
 	{
-		if (strcmp(g_check[0], "R") == 0)
+		if (ft_strcmp(g_check[0], "R") == 0)
 			ft_check_r();
-		else if (strcmp(g_check[0], "NO") == 0)
+		else if (ft_strcmp(g_check[0], "NO") == 0)
 			ft_check_no();
-		else if (strcmp(g_check[0], "WE") == 0)
+		else if (ft_strcmp(g_check[0], "WE") == 0)
 			ft_check_we();
-		else if (strcmp(g_check[0], "SO") == 0)
+		else if (ft_strcmp(g_check[0], "SO") == 0)
 			ft_check_so();
-		else if (strcmp(g_check[0], "EA") == 0)
+		else if (ft_strcmp(g_check[0], "EA") == 0)
 			ft_check_ea();
-		else if (strcmp(g_check[0], "S") == 0)
+		else if (ft_strcmp(g_check[0], "S") == 0)
 			ft_check_s();
-		else if (strcmp(g_check[0], "C") == 0)
+		else if (ft_strcmp(g_check[0], "C") == 0)
 			ft_check_c();
-		else if (strcmp(g_check[0], "F") == 0)
+		else if (ft_strcmp(g_check[0], "F") == 0)
 			ft_check_f();
-		else if (strchr("1 0", g_map[g_y_len][0]) && g_mapcount[g_t].mapx > 0)
+		else if (ft_strchr("1 0", g_map[g_y_len][0]) && g_mapcount[g_t].mapx > 0)
 			ft_check_errormap(p);
 		else
 			ft_exit1();

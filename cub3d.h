@@ -286,7 +286,7 @@ void				ft_info_render(int i);
 void				render_sprite(int i);
 void				ft_collect_info_sprite();
 void				ft_render_sprite(int g_j, int i, int start);
-void				render_column1(int i, int g_count);
+void				render_column1(int i);
 void				ft_render_walls(int g_j, int i, int start);
 void				render_colomn(int i);
 void				ft_render_map(int i);
@@ -300,7 +300,7 @@ unsigned int		*ft_texture(char *file, unsigned int *texture);
 int					wall_collision();
 int					wall_checker();
 void				ft_design_morba3_2(int g_j, int i, int y_copy);
-int					design_morba3(int i, unsigned int color, int g_j);
+int					design_morba3(int i, int g_j);
 void				ft_morba3_2(int color, int i, int g_j);
 void				ft_morba3_3(int color, int i, int g_j);
 int					ray_direction();
@@ -315,11 +315,15 @@ void				ft_nizar_calcul();
 void				ft_exit1();
 void				ft_check_c1(void);
 void				ft_check_f1(void);
-void				ft_tab_1(int fd, int lenght, char **str);
+void				ft_tab_1(int lenght, char **str);
 void				ft_check_errormap1(void);
 void				ft_sprite_exist1(void);
 void				ft_sprite_exist(void);
 double				rad(double x);
 double				deg(double x);
+void				ft_is_digit(const char *str, int i);
+void				ft_is_digit1(const char *str, int i);
+int					ft_strcmp(char *s1, char *s2);
+
 
 #endif

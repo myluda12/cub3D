@@ -87,8 +87,6 @@ void		ft_sprite_exist1(void)
 
 int			ft_cast_ray(void)
 {
-	int		g_check;
-
 	ft_yx_intercept();
 	ft_find_intersec();
 	ft_yx_intercept1();
